@@ -1,0 +1,32 @@
+<div class="well cf" style="clear: right;">
+  <%= form_for [@question, @question.answers.build], html: {:class => "form-answer"} do |f| %>
+  <% if @answer %>
+    <% if @answer.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+        <ul>
+        <% @answer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+
+  <legend>Your Answer</legend>
+
+  <div class="form-group">
+    <label for="">Answer Title:</label>
+    <%= f.text_field :title, :class => "form-control" %>
+  </div>
+  <div class="form-group ">
+    <label for="">Answer Content:</label>
+    <%= f.text_area :content, :class => "form-control" %>
+  </div>
+    <%= f.submit :class => "btn btn-primary" %>
+<% end %>
+
+</div>
+
+

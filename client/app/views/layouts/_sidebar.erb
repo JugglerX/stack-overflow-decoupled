@@ -1,0 +1,8 @@
+<% if @question %>
+  <h3>More Questions</h3>
+  <% @questions.each do |question_item| %>
+  <div id="question-<%= question_item.id %>"class="post question teaser-tiny cf">
+  <a href="#"><%= question_item.title %><span class="badge"><%= question_item.score %></span></a>
+  </div>
+  <% end %>
+<% end %>

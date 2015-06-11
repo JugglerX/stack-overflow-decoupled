@@ -1,0 +1,23 @@
+<div id="question-<%= question_item.id %>"class="post question cf">
+  <div class="vote">
+
+    <%= button_to "", votes_path(vote: {vote_value: 1, votable_type: "Question", votable_id: question_item.id}), :class => "vote-button vote-up", method: :post %>
+
+      <div class="vote-count"><%= question_item.score %></div>
+
+    <%= button_to "", votes_path(vote: {vote_value: -1, votable_type: "Question", votable_id: question_item.id}), :class => "vote-button vote-down", method: :post %>
+
+  </div>
+
+  <div class="question-body">
+    <h4 class="question-heading"><%= link_to question_item.title, question_item %></h4>
+    <p><%= question_item.content %></p>
+
+    <div class="btn-group btn-group-sm">
+      <%= link_to "Show", question_path(question_item), :class => "btn  btn-default", :id => "my-id" %>
+      <%= link_to "Edit", edit_question_path(question_item), :class => "btn btn-default", :id => "my-id" %>
+      <%= link_to'Delete', question_path(question_item), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default", :id => "my-id" %>
+    </div>
+
+  </div>
+</div>

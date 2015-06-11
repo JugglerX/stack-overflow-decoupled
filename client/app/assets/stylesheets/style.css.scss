@@ -1,0 +1,7 @@
+$primary-color: #F47920;
+
+@mixin btn-clear {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+}
