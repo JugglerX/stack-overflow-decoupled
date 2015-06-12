@@ -1,0 +1,31 @@
+<div class="post-wrapper">
+  <div class="row question-wrapper">
+    <div class="col-md-9 ">
+
+
+        <div class="questions">
+          <a href="#">Recent Questions</a>
+          <script id="sample-template" type="text/x-handlebars-template">
+          {{score}}
+            <div id="question-{{id}}"class="post question cf">
+
+             <div class="vote">
+
+             <button class="vote-button vote-up"></button>
+
+             <div class="vote-count">{{score}}</div>
+
+             <button class="vote-button vote-down"></button>
+
+            </div>
+
+            <div class="question-body">
+            <h4 class="question-heading">{{title}}</h4>
+            <p>{{content}}</p>
+            </div>
+          </script>
+        </div>
+
+    </div>
+  </div>
+</div>
