@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require raphael-min
 //= require jquery_ujs
 //= require turbolinks
 //= require handlebars
